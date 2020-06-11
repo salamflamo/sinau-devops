@@ -3,7 +3,7 @@
 ## Create user kube and Install some package
 ```
 adduser kube; \
-echo -e "P@ssw0rd" | passwd kube --stdin; \
+echo -e $yourpassword | passwd kube --stdin; \
 echo "kube  ALL=(ALL)  NOPASSWD: ALL" > /etc/sudoers.d/kube; \
 su - kube; \
 sudo dnf install -y bash-completion tmux epel-release; \
